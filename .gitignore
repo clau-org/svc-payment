@@ -1,2 +1,24 @@
+# general
+package-lock.json
+.env
+*.log
+
+# node
 node_modules
-database/generated
+
+# nuxt
+.nuxt
+nuxt.d.ts
+
+# macos
+.DS_Store
+
+# yarn
+.yarn/cache
+.yarn/*state*
+
+# local History
+.history
+
+# service
+src/database/generated

@@ -2,15 +2,15 @@
   "name": "playground",
   "version": "0.0.0",
   "tasks": {
-    "dev": "deno run -A --watch main.ts",
+    "dev": "deno run -A --watch src/main.ts",
     "test": "deno test -A",
     "test:dev": "deno test -A --watch",
-    "preview": "deno run -A main.ts",
+    "preview": "deno run -A src/main.ts",
     "db:generate": "deno run -A npm:prisma@latest generate --data-proxy --schema=./database/schema.prisma",
     "db:push": "deno run -A npm:prisma@latest db push --schema=./database/schema.prisma",
-    "deploy:test": "deployctl deploy --project='cli-template'     --prod --exclude='node_modules' main.ts ",
-    "deploy:stage": "deployctl deploy --project='stage-svc-<NAME>' --prod --exclude='node_modules' main.ts ",
-    "deploy:prod": "deployctl deploy --project='prod-api-<NAME>'  --prod --exclude='node_modules' main.ts "
+    "deploy:test": "deployctl deploy --project='cli-template'     --prod --exclude='node_modules' src/main.ts ",
+    "deploy:stage": "deployctl deploy --project='stage-svc-<NAME>' --prod --exclude='node_modules' src/main.ts ",
+    "deploy:prod": "deployctl deploy --project='prod-api-<NAME>'  --prod --exclude='node_modules' src/main.ts "
   },
   "fmt": {
     "files": {
