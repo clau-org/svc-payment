@@ -1,0 +1,44 @@
+[
+  {
+    "_id": "257a10f2-e3a9-473b-ac75-b68615d3d76c",
+    "name": "stage",
+    "default": false,
+    "sortNum": 20000,
+    "created": "2023-04-19T05:47:41.358Z",
+    "modified": "2023-04-19T05:47:41.358Z",
+    "data": [
+      {
+        "name": "host",
+        "value": "https://stage-svc-payment.deno.dev"
+      }
+    ]
+  },
+  {
+    "_id": "d87c9a8f-b993-4081-a261-229f8a09d51e",
+    "name": "prod",
+    "default": false,
+    "sortNum": 30000,
+    "created": "2023-04-19T05:47:47.898Z",
+    "modified": "2023-04-19T05:47:47.898Z",
+    "data": [
+      {
+        "name": "host",
+        "value": "https://prod-svc-payment.deno.dev"
+      }
+    ]
+  },
+  {
+    "_id": "0f574289-a116-44f0-a5ba-b148c18d65ab",
+    "name": "dev",
+    "default": true,
+    "sortNum": 15000,
+    "created": "2023-04-19T05:59:30.698Z",
+    "modified": "2023-04-19T05:59:30.699Z",
+    "data": [
+      {
+        "name": "host",
+        "value": "http://localhost:8000"
+      }
+    ]
+  }
+]

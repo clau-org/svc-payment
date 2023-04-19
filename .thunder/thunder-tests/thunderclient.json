@@ -1,0 +1,53 @@
+[
+  {
+    "_id": "36cc1f62-b503-431c-a5e2-b0563c06d357",
+    "colId": "31f3d438-3fd4-4554-b3a0-4048b177e3b6",
+    "containerId": "a240b443-94cb-43c8-9834-c563e1781c16",
+    "name": "stripe checkout",
+    "url": "{{host}}/payment/checkout",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2023-04-19T05:48:37.920Z",
+    "modified": "2023-04-19T06:00:59.963Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"items\": [\n    {\n      \"name\": \"Product 1\",\n      \"price\": 10.99,\n      \"image\": \"https://img1.ak.crunchyroll.com/i/spire1/43f07771515388f98f84ab8dc5a711e51656844578_large.jpg\",\n      \"quantity\": 2\n    },\n    {\n      \"name\": \"Product 2\",\n      \"price\": 19.99,\n      \"quantity\": 1\n    }\n  ],\n  \"provider\": {\n    \"name\": \"stripe\",\n    \"key\": \"sk_test_51KgGJyBOqmSp6J1dKgVYu8NOZDwTO7qBgZpCguZyMo3U3hIbcP3bOtRgO7JjaDjIq54c5du3cxZB0vvwc2tez7Md00GvTzdkDt\",\n    \"redirects\": {\n      \"success\": \"https://ejemplo.com/exito\",\n      \"failure\": \"https://ejemplo.com/fallo\",\n      \"pending\": \"https://ejemplo.com/pendiente\"\n    }\n  }\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "application/json"
+      },
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      }
+    ]
+  },
+  {
+    "_id": "df49e3bc-8470-42c4-86b5-d2d35bcf056d",
+    "colId": "31f3d438-3fd4-4554-b3a0-4048b177e3b6",
+    "containerId": "a240b443-94cb-43c8-9834-c563e1781c16",
+    "name": "mercado checkout",
+    "url": "{{host}}/payment/checkout",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2023-04-19T05:52:22.359Z",
+    "modified": "2023-04-19T06:01:01.002Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"items\": [\n    {\n      \"name\": \"Product 1\",\n      \"price\": 10.99,\n      \"image\": \"https://img1.ak.crunchyroll.com/i/spire1/43f07771515388f98f84ab8dc5a711e51656844578_large.jpg\",\n      \"quantity\": 2\n    },\n    {\n      \"name\": \"Product 2\",\n      \"price\": 19.99,\n      \"quantity\": 1\n    }\n  ],\n  \"provider\": {\n    \"name\": \"mercadopago\",\n    \"key\": \"TEST-2023949827902703-041616-5c35f55f4cc62a1695aa0cae0b1a88d7-301948030\",\n    \"redirects\": {\n      \"success\": \"https://ejemplo.com/exito\",\n      \"failure\": \"https://ejemplo.com/fallo\",\n      \"pending\": \"https://ejemplo.com/pendiente\"\n    }\n  }\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]
