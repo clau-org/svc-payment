@@ -9,8 +9,8 @@
     "db:generate": "deno run -A npm:prisma@latest generate --data-proxy --schema=./src/database/schema.prisma",
     "db:push": "deno run -A npm:prisma@latest db push --schema=./src/database/schema.prisma",
     "deploy:test": "deployctl deploy --project='cli-template'     --prod --exclude='node_modules' src/main.ts ",
-    "deploy:stage": "deployctl deploy --project='stage-svc-<NAME>' --prod --exclude='node_modules' src/main.ts ",
-    "deploy:prod": "deployctl deploy --project='prod-api-<NAME>'  --prod --exclude='node_modules' src/main.ts "
+    "deploy:stage": "deployctl deploy --project='stage-svc-payment' --prod --exclude='node_modules' src/main.ts ",
+    "deploy:prod": "deployctl deploy --project='prod-svc-payment'  --prod --exclude='node_modules' src/main.ts "
   },
   "fmt": {
     "files": {
