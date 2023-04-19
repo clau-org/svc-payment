@@ -7,6 +7,6 @@ import paymentCheckout from "./api/payment/checkout.ts";
 
 const eventHandlers = [paymentCheckout];
 
-export interface ServiceContext extends DefaultServiceContext { }
+export interface ServiceContext extends DefaultServiceContext {}
 
 export default await defineService({ eventHandlers });
