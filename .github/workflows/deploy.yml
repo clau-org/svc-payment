@@ -2,8 +2,8 @@ name: Deploy service
 
 on:
   workflow_dispatch:
-    env:
-      version:
+    inputs:
+      env:
         description: "Select environment"
         required: true
         default: "stage"
