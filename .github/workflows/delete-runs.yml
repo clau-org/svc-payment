@@ -5,7 +5,9 @@ on:
       workflow:
         description: 'Workflow file path'
         type: string
+
 run-name: Delete workflows ${{ inputs.workflow }} by @${{ github.actor }}
+
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
@@ -19,6 +21,7 @@ jobs:
           repository: ${{ github.repository }}
           older-than-seconds: 1
           workflow: ${{ inputs.workflow }}
+          
   delete-all-runs:
     runs-on: ubuntu-latest
     if: github.event_name == 'workflow_dispatch' && github.event.inputs.workflow == ''

@@ -1,6 +1,5 @@
 {
   "name": "svc-payment",
-  "main": "src/main.ts",
   "devDependencies": {
     "prisma": "^4.12.0"
   },
