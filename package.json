@@ -1,14 +1,6 @@
 {
-  "name": "my-prisma-project",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "name": "svc-payment",
+  "main": "src/main.ts",
   "devDependencies": {
     "prisma": "^4.12.0"
   },

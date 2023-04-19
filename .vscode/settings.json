@@ -1,0 +1,12 @@
+{
+  "deno.enable": true,
+  "deno.lint": false,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "denoland.vscode-deno",
+  "[typescript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+  "thunder-client.saveToWorkspace": true,
+  "thunder-client.defaultUrl": "http://localhost:8000",
+  "thunder-client.workspaceRelativePath": ".thunder"
+}

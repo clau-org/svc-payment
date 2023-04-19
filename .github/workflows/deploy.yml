@@ -1,0 +1,53 @@
+name: Deploy service
+
+on:
+  workflow_dispatch:
+    env:
+      version:
+        description: "Select environment"
+        required: true
+        default: "stage"
+        type: choice
+        options:
+          - dev
+          - stage
+          - prod
+
+run-name: "Deploy svc-payment to '${{ input.env }}' by ${{ github.actor }}"
+
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  NODE_OPTIONS: "--max_old_space_size=4096"
+  DENO_DEPLOY_TOKEN: ${{ secrets.DENO_DEPLOY_TOKEN }}
+
+jobs:
+  publish:
+    name: Deploy service
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code 📁
+        uses: actions/checkout@v3
+
+      - name: Install Deno ⬇️
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - name: Setup environment ⚒️
+        run: deno task env:${{ inputs.env }}
+
+      # - name: Generate db client ⚒️
+      #   run: deno task db:generate
+
+      # - name: Test 🥑
+      #   run: deno task test
+
+      - name: Preview 👀
+        run: deno task preview & sleep 2 && kill $!
+      
+      - name: Install deployctl ⬇️
+        run: deno install -A -r -f https://deno.land/x/deploy/deployctl.ts
+
+      - name: Deploy 🚀
+        run: deno task deploy:${{ inputs.env }}
