@@ -26,7 +26,7 @@ export async function requestCheckout(checkoutRequest: CheckoutRequest): Promise
                 success: success_url,
                 failure: cancel_url
             },
-            name: providerName
+            name
         },
     } = checkoutRequest
 
@@ -42,7 +42,7 @@ export async function requestCheckout(checkoutRequest: CheckoutRequest): Promise
     // Get data from provider response
     const { id, url } = await stripeClient.checkout.sessions.create(config);
 
-    return { id, url, providerName }
+    return { id, url, provider: { name } } 
 }
 
 export const transformToItem = (item: Item): ItemStripe => {

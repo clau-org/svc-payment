@@ -36,7 +36,9 @@ export interface CheckoutRequest {
 export interface CheckoutResponse {
     id: string;
     url: string;
-    providerName: string;
+    provider: {
+        name: string
+    };
 }
 
 // Create map of requestCheckoutByProvider

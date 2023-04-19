@@ -8,7 +8,7 @@ export interface ItemMercadoPago {
     quantity: number;
 }
 
-export const PAYMENT_PROVIDER_NAME = "mercadpago"
+export const PAYMENT_PROVIDER_NAME = "mercadopago"
 
 export async function requestCheckout(checkoutRequest: CheckoutRequest): Promise<CheckoutResponse> {
 
@@ -18,7 +18,7 @@ export async function requestCheckout(checkoutRequest: CheckoutRequest): Promise
         provider: {
             key: access_token,
             redirects: back_urls,
-            name: providerName
+            name
         },
     } = checkoutRequest
 
@@ -34,7 +34,7 @@ export async function requestCheckout(checkoutRequest: CheckoutRequest): Promise
     // Get data from provider response
     const { body: { id, init_point: url } } = await mercadopago.preferences.create(config);
 
-    return { id, url, providerName };
+    return { id, url, provider: { name } };
 }
 
 export const transformToItem = (item: Item): ItemMercadoPago => {
