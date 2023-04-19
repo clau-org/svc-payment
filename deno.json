@@ -2,8 +2,8 @@
   "name": "svc-payment",
   "version": "0.0.0",
   "tasks": {
-    "env:stage": "cp -f .env.stage .env",
-    "env:prod": "cp -f .env.prod .env",
+    "env:stage": "cp .env.stage .env",
+    "env:prod": "cp .env.prod .env",
     "dev": "deno run -A --watch src/main.ts",
     "test": "deno test -A",
     "test:dev": "deno test -A --watch",
