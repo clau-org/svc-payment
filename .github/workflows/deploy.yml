@@ -9,7 +9,6 @@ on:
         default: "stage"
         type: choice
         options:
-          - dev
           - stage
           - prod
 

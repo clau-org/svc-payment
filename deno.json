@@ -2,7 +2,6 @@
   "name": "svc-payment",
   "version": "0.0.0",
   "tasks": {
-    "env:dev": "cp -f .env.dev .env",
     "env:stage": "cp -f .env.stage .env",
     "env:prod": "cp -f .env.prod .env",
     "dev": "deno run -A --watch src/main.ts",
@@ -11,7 +10,6 @@
     "preview": "deno run -A src/main.ts",
     "db:generate": "deno run -A npm:prisma@latest generate --data-proxy --schema=./src/database/schema.prisma",
     "db:push": "deno run -A npm:prisma@latest db push --schema=./src/database/schema.prisma",
-    "deploy:dev": "deployctl deploy --project='dev-svc-payment' --prod --exclude='node_modules' src/main.ts ",
     "deploy:stage": "deployctl deploy --project='stage-svc-payment' --prod --exclude='node_modules' src/main.ts ",
     "deploy:prod": "deployctl deploy --project='prod-svc-payment'  --prod --exclude='node_modules' src/main.ts "
   },

@@ -9,7 +9,7 @@
     "data": [
       {
         "name": "host",
-        "value": ""
+        "value": "https://stage-svc-payment.deno.dev"
       }
     ]
   },
@@ -23,7 +23,7 @@
     "data": [
       {
         "name": "host",
-        "value": ""
+        "value": "https://prod-svc-payment.deno.dev"
       }
     ]
   },
